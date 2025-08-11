@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+body {
+  color: #333333;
+  font-family: sans-serif, serif;
+}
+
+/*anchor*/
+a {
+  color: #999966;
+}
+
+a:hover {
+  color: #996600;
+}
+
+/*topicpath*/
+.topicPath {
+  font-size: 12px;
+}
+
+/*page*/
+#page {
+  width: 980px;
+  margin: 0 auto;
+}
+
+/*pageHeader*/
+#pageHead .sitetop #siteTitle {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-family: 'Noto Serif JP', serif;
+  float: left;
+}
+
+#pageHead .sitetop #siteTitle a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+#pageHead .sitetop .sitemap {
+  margin-top: 20px;
+  margin-right: 70px;
+  float: right;
+}
+
+#pageHead .sitetop .sitemap ul {
+  margin-bottom: 0;
+}
+
+#pageHead .sitetop .sitemap ul li{
+  font-size: 14px;
+  display: inline;
+  margin-right: 25px;
+}
+
+#pageHead .sitetop .sitemap ul li a {
+  text-decoration: none;
+}
+
+#pageHead .sitetop:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#pageHead #siteTitle:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+
+#pageHead .globalNavi {
+  border: solid #CCCCCC;
+  border-width: 1px 0;
+  padding: 0;
+}
+
+#pageHead .globalNavi ul {
+  margin: 0;
+  padding: 0;
+}
+
+#pageHead .globalNavi ul li {
+  list-style: none;
+  width: 163px;
+  height: 50px;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.429;
+  position: relative;
+}
+
+#pageHead .globalNavi ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+
+
+#pageHead .globalNavi ul.menu li ul.sub {
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  border-top: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+#pageHead .globalNavi ul.menu li ul.sub li{
+  border-bottom: 1px dotted #CCCCCC;
+  position: relative;
+  z-index: 10;
+}
+
+#pageHead .globalNavi ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+
+#pageHead .globalNavi ul li a span {
+  margin-top: 10px;
+}
+
+#pageHead .globalNavi ul li a:hover,
+#pageHead .globalNavi ul li.hovering,
+#pageHead .globalNavi ul li.current a.now {
+  background-color: #F2F2E5;
+}
+
+#pageHead .globalNavi ul.menu li ul.sub {
+  border: 1px solid #CCCCCC;
+  background-color: white;
+  border-top: 0;
+  position: absolute;
+}
+
+/*pageFooter*/
+#pageFoot {
+  border-top: solid 1px #CCCCCC;
+  margin-top: 30px;
+}
+
+#pageFoot #copyright small {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#pageBody .pageTitle {
+  font-size: 24px;
+  color: #349FA6;
+  border-bottom: solid 1px #349FA6;
+  padding: 5px;
+  padding-top: 0;
+  line-height: 1.25;
+  font-family: 'Noto Serif JP', serif;
+}
+
+#pageBody .pageBodyMain .pageBodySub {
+  margin-top: 0;
+  width: 220px;
+  float: left;
+}
+
+#pageBody .pageBodyMain .articleDetail p {
+  padding-left: 20px;
+}
+
+#pageBody .pageBodyMain .articleDetail p span {
+  color: red;
+}
+
+#pageBody .pageBodyMain .articleDetail #faq {
+  padding-left: 20px;
+}
+#pageBody .pageBodyMain .articleDetail #faq dt {
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+#pageBody .pageBodyMain .articleDetail #faq dd {
+  padding-bottom: 10px;
+}
+
+#pageBody .pageBodyMain .articleDetail #faq dt:hover{
+  color: #996600;
+  cursor: pointer;
+}
+
+#pageBody .pageBodyMain .articleDetail ul li{
+  padding: 5px 0;
+}
+
+#pageBody .pageBodyMain .articleDetail ul.contactlist {
+  list-style-type: none;
+}
+
+#pageBody .pageBodyMain .articleDetail ul.contactlist li a {
+  text-decoration: none;
+}
+
+#pageBody .pageBodyMain .articleDetail .flow {
+  padding-left: 20px;
+}
+
+#pageBody .pageBodyMain .articleDetail .flow dt {
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+#pageBody .pageBodyMain .articleDetail .flow dd {
+  padding-bottom: 25px;
+  margin-left: 15px;
+}
+
+#pageBody .pageBodyMain .pageBodySub .localNavi .localNaviTitle dt {
+  padding: 13px 20px;
+  background-color: #BDB76B;
+  color: white;
+}
+
+#pageBody .pageBodyMain .pageBodySub .localNavi .localNaviTitle dd {
+  margin:0;
+  border-bottom: dotted 1px #CCCCCC;
+}
+
+#pageBody .pageBodyMain .pageBodySub .localNavi .localNaviTitle dd a {
+  text-decoration: none;
+  display: block;
+  width: 220px;
+  height: 45px;
+  margin: 0;
+  padding: 10px 0 10px 25px;
+  box-sizing: border-box;
+}
+
+#pageBody .pageBodyMain .pageBodySub .localNavi .localNaviTitle dd a:hover,
+#pageBody .pageBodyMain .pageBodySub .localNavi .localNaviTitle dd a.current {
+  background-color: #F2F2E5;
+}
+
+#pageBody .pageBodyMain .articleDetail {
+  width: 720px;
+  float: right;
+}
+
+#pageBody .pageBodyMain:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#pageBody .heading-typeA {
+  font-size: 16px;
+  border-left: 5px solid #E3E4D9;
+  padding-left: 10px;
+  line-height: 1.375;
+}
+
+/*news*/
+#pageBody .news {
+  margin-top: 40px;
+}
+
+#pageBody .news h1 {
+  font-size: 20px;
+  border-bottom: 1px solid #CCCCCC;
+  padding: 5px 0;
+}
+
+#pageBody .news table {
+  width: 100%;
+}
+
+#pageBody .news table tr th,
+#pageBody .news table tr td {
+  font-size: 14px;
+  line-height: 1.429;
+  border-bottom: 1px dotted #CCCCCC;
+  padding: 10px 0;
+  vertical-align: top;
+}
+
+#pageBody .news table tr th {
+  white-space: nowrap;
+  padding-right: 30px;
+}
+
+#pageBody .news table tr td {
+  width: 100%;
+}
+
+#pageBody .info {
+  float: left;
+  width: 58%;
+}
+
+#pageBody .aboutus {
+  float: right;
+  width: 38%;
+}
+
+#pageBody .pageBodynews:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#pageBody .mainVisual {
+  position: relative;
+}
+
+#pageBody .mainVisual img {
+  vertical-align: bottom;
+}
+
+#pageBody .mainVisual .mainVisualText {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  color: #FFF;
+  background-color: rgba(0,0,0,0.4);
+  width: 250px;
+  padding: 15px 25px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#pageBody .mainVisual .mainVisualText h1 {
+  font-size: 26px;
+  line-height: 1.231;
+  margin: 0;
+  text-align: center;
+}
+
+#pageBody .mainVisual .mainVisualText p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
