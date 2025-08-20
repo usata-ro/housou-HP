@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 
 /* --- ベーススタイル --- */
+/*
+  サイト全体に適用される基本スタイル（フォント、文字色、リンクの色など）
+  サイト全体で統一したい要素がある場合に修正
+*/
 body {
   color: #333333;
   font-family: sans-serif, serif;
@@ -19,6 +23,10 @@ a:hover {
 }
 
 /* --- ページ全体 --- */
+/*
+  サイトコンテンツの最大幅と中央寄せ、左右余白の設定
+  レスポンシブデザインのブレークポイントは768pxに設定
+*/
 #page {
   max-width: 980px;
   margin: 0 auto;
@@ -26,6 +34,9 @@ a:hover {
 }
 
 /* --- ヘッダー --- */
+/*
+  サイトのヘッダーセクション（ロゴ、サイトマップ、グローバルナビゲーションなど）
+*/
 #pageHead .sitetop #siteTitle {
   font-size: 30px;
   line-height: 1.2;
@@ -67,6 +78,7 @@ a:hover {
   display: block;
 }
 
+/* グローバルナビゲーションのスタイル */
 #pageHead .globalNavi {
   border: solid #CCCCCC;
   border-width: 1px 0;
@@ -97,6 +109,7 @@ a:hover {
   position: relative;
 }
 
+/* ドロップダウンメニュー（サブメニュー）のスタイル */
 #pageHead .globalNavi ul.menu li ul.sub {
   border: 1px solid #CCCCCC;
   background-color: white;
@@ -121,6 +134,7 @@ a:hover {
   padding: 15px;
 }
 
+/* ホバー時の背景色、現在のページの背景色 */
 #pageHead .globalNavi ul li a:hover,
 #pageHead .globalNavi ul li.hovering,
 #pageHead .globalNavi ul li.current a.now {
@@ -128,6 +142,9 @@ a:hover {
 }
 
 /* --- メインコンテンツ --- */
+/*
+  ページごとのメインコンテンツエリア
+*/
 #pageBody .pageTitle {
   font-size: 24px;
   color: #349FA6;
@@ -138,6 +155,7 @@ a:hover {
   font-family: 'Noto Serif JP', serif;
 }
 
+/* トップページのニュースとアバウトセクションのレイアウト（PC版） */
 #pageBody .pageBodynews .news {
   margin-top: 40px;
   float: left;
@@ -177,13 +195,14 @@ a:hover {
   width: 38%;
 }
 
+/* floatの解除 */
 #pageBody .pageBodynews:after {
   content: "";
   clear: both;
   display: block;
 }
 
-/* メインビジュアル */
+/* メインビジュアル（スライダー）のスタイル */
 #pageBody .mainVisual {
   position: relative;
 }
@@ -194,6 +213,7 @@ a:hover {
   height: auto;
 }
 
+/* メインビジュアル内のテキストボックス */
 #pageBody .mainVisual .mainVisualText {
   position: absolute;
   left: 50px;
@@ -213,6 +233,9 @@ a:hover {
 }
 
 /* --- フッター --- */
+/*
+  サイトのフッターセクション（著作権表示など）
+*/
 #pageFoot {
   border-top: solid 1px #CCCCCC;
   margin-top: 30px;
@@ -225,7 +248,12 @@ a:hover {
   line-height: 1.5;
 }
 
-/* --- その他の詳細スタイル（元ファイルから抜粋） --- */
+/* --- その他の詳細スタイル --- */
+/*
+  個別ページや特定のコンポーネントに使用されるスタイル
+  ※ここに記載されているCSSは、個別のページテンプレート（例：`consultation.html`など）のレイアウトやコンテンツスタイルを制御
+  特定の要素（`.articleDetail`など）のスタイルを変更する際に編集する。
+*/
 #pageBody .pageBodyMain .articleDetail p { padding-left: 20px; }
 #pageBody .pageBodyMain .articleDetail p span { color: red; }
 #pageBody .pageBodyMain .articleDetail #faq { padding-left: 20px; }
@@ -252,9 +280,17 @@ a:hover {
 
 
 /*========================================================================================*/
+
 /* ここからレスポンシブデザイン（モバイルファースト） */
+
 /* 768px以下の画面幅に適用 */
 @media screen and (max-width: 768px) {
+
+  /*
+    --- スマートフォン向け調整 ---
+    PC版のレイアウトから、スマートフォンでの見やすさを考慮した変更
+    幅、フロート、フォントサイズなどを調整
+  */
 
   /* --- ページ全体 --- */
   #page {
@@ -284,6 +320,7 @@ a:hover {
     margin: 0 5px;
   }
   
+  /* グローバルナビゲーションのスタイルを縦並びに変更 */
   #pageHead .globalNavi {
     border-width: 0;
   }
@@ -303,6 +340,7 @@ a:hover {
     padding: 10px;
   }
   
+  /* ドロップダウンメニューを静的な表示に変更 */
   #pageHead .globalNavi ul.menu li ul.sub {
     position: static;
     border: none;
@@ -320,6 +358,7 @@ a:hover {
   }
 
   /* --- メインコンテンツ --- */
+  /* メインビジュアルのテキストボックスを調整 */
   #pageBody .mainVisual .mainVisualText {
     left: 20px;
     bottom: 20px;
@@ -332,6 +371,7 @@ a:hover {
     font-size: 20px;
   }
 
+  /* ニュースとアバウトセクションを縦並びに変更 */
   #pageBody .pageBodynews .info,
   #pageBody .pageBodynews .aboutus {
     float: none;
