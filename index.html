@@ -84,10 +84,70 @@
           <div class="info">
             <h1>おしらせ</h1>
             <table>
+
+
+
+<script>
+  const endpoint = "https://hoso-news.microcms.io/api/v1/news/l-yumgqzqpb8"; // newsは作成したAPI識別子に
+  const apiKey = "BK1qbXtakEMvkFTOgIbqtQLAUPla4yRYkgMr";
+
+  async function fetchNews() {
+    try {
+      const response = await fetch(endpoint, {
+        headers: { "X-MICROCMS-API-KEY": apiKey }
+      });
+      const data = await response.json();
+      renderNews(data.contents);
+    } catch (error) {
+      console.error("読み込みエラー:", error);
+    }
+  }
+
+  function renderNews(contents) {
+    const container = document.getElementById("news-container");
+    
+    // 取得したデータを1つずつループしてHTML文字列を作成
+    const html = contents.map(item => {
+      // 日付のフォーマット（2025年1月19日形式に変換）
+      const date = new Date(item.date);
+      const dateString = `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+      const datetime = date.toISOString().split('T')[0]; // 2025-01-19形式
+
+      return `
+        <tr>
+          <th><time datetime="${datetime}">${dateString}</time></th>
+          <td>
+            <a href="${item.link}">${item.text}</a> を更新しました。
+            <br>活動予定はこちらから
+          </td>
+        </tr>
+      `;
+    }).join("");
+
+    container.innerHTML = html;
+  }
+
+  fetchNews();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <tr>
-                <th><time datetime="2020-04-21"></time></th>
-                <td> <a href=></a> <br></td>
-              </tr>
+                <th><time datetime="2020-04-21">2025年1月１９日</time></th>
+                <td> <a href="consultation.html">活動予定</a> を更新しました。
+                 <br>活動予定はこちらから </tr>
               <tr>
                 <th><time datetime="2020-04-21"></time></th>
                 <td> <a href=></a> <br></td>
